@@ -54,6 +54,7 @@
             this.btnX = new System.Windows.Forms.Button();
             this.btnY = new System.Windows.Forms.Button();
             this.btnZ = new System.Windows.Forms.Button();
+            this.btnGetNewWord = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnA
@@ -316,11 +317,22 @@
             this.btnZ.UseVisualStyleBackColor = true;
             this.btnZ.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnGetNewWord
+            // 
+            this.btnGetNewWord.Location = new System.Drawing.Point(339, 405);
+            this.btnGetNewWord.Name = "btnGetNewWord";
+            this.btnGetNewWord.Size = new System.Drawing.Size(75, 23);
+            this.btnGetNewWord.TabIndex = 1;
+            this.btnGetNewWord.Text = "New Word";
+            this.btnGetNewWord.UseVisualStyleBackColor = true;
+            this.btnGetNewWord.Click += new System.EventHandler(this.btnGetNewWord_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGetNewWord);
             this.Controls.Add(this.btnD);
             this.Controls.Add(this.btnM);
             this.Controls.Add(this.btnL);
@@ -381,6 +393,7 @@
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Button btnY;
         private System.Windows.Forms.Button btnZ;
+        private System.Windows.Forms.Button btnGetNewWord;
     }
 }
 
