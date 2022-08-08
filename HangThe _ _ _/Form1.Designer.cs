@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnA = new System.Windows.Forms.Button();
             this.btnB = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
@@ -55,6 +56,8 @@
             this.btnY = new System.Windows.Forms.Button();
             this.btnZ = new System.Windows.Forms.Button();
             this.btnGetNewWord = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TxtDebug = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnA
@@ -225,7 +228,7 @@
             this.btnQ.TabIndex = 0;
             this.btnQ.Text = "Q";
             this.btnQ.UseVisualStyleBackColor = true;
-            this.btnQ.Click += new System.EventHandler(this.button1_Click);
+            this.btnQ.Click += new System.EventHandler(this.NumberBTN);
             // 
             // btnR
             // 
@@ -285,7 +288,7 @@
             this.btnW.TabIndex = 0;
             this.btnW.Text = "W";
             this.btnW.UseVisualStyleBackColor = true;
-            this.btnW.Click += new System.EventHandler(this.button1_Click);
+            this.btnW.Click += new System.EventHandler(this.NumberBTN);
             // 
             // btnX
             // 
@@ -327,11 +330,24 @@
             this.btnGetNewWord.UseVisualStyleBackColor = true;
             this.btnGetNewWord.Click += new System.EventHandler(this.btnGetNewWord_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // TxtDebug
+            // 
+            this.TxtDebug.Location = new System.Drawing.Point(136, 81);
+            this.TxtDebug.Name = "TxtDebug";
+            this.TxtDebug.Size = new System.Drawing.Size(100, 20);
+            this.TxtDebug.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TxtDebug);
             this.Controls.Add(this.btnGetNewWord);
             this.Controls.Add(this.btnD);
             this.Controls.Add(this.btnM);
@@ -360,8 +376,9 @@
             this.Controls.Add(this.btnN);
             this.Controls.Add(this.btnA);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "H_NGM_N";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -394,6 +411,8 @@
         private System.Windows.Forms.Button btnY;
         private System.Windows.Forms.Button btnZ;
         private System.Windows.Forms.Button btnGetNewWord;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox TxtDebug;
     }
 }
 

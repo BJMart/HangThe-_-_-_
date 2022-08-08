@@ -16,6 +16,11 @@ namespace HangThe______
     {
         const string path = "words.txt";
         string randomWord = "";
+        string
+        
+        
+      
+        
         public Form1()
         {
 
@@ -29,6 +34,11 @@ namespace HangThe______
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+        private void NumberBTN(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
 
         }
 
@@ -70,7 +80,10 @@ namespace HangThe______
                     byte[] data = Convert.FromBase64String(line);
                     string decodedString = Encoding.UTF8.GetString(data);
                     words.Add(decodedString);
+                 TxtDebug.Text = button;
+                    
                 }
+                
             }
         }
 
@@ -96,13 +109,25 @@ namespace HangThe______
                 labels[i].Height = 12;
                 labels[i].Tag = "placeHolder";
                 xPos += 30;
+                
+               
+                
+
             }
             for (int i = 0; i < randomWord.Length; i++) //this for loop adds each label to the controls collection of the winform
             {
 
 
                 this.Controls.Add(labels[i]);
+                
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+                
+        }
+
+       
     }
 }
