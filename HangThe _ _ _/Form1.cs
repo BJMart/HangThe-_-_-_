@@ -16,7 +16,8 @@ namespace HangThe______
     {
         const string path = "words.txt";
         string randomWord = "";
-        
+       
+
 
 
 
@@ -34,22 +35,50 @@ namespace HangThe______
         private void NumberBTN(object sender, EventArgs e)
         {
             Button button = sender as Button;
+            
+            
+            
 
             List<Label> placeHoldersToChange = new List<Label>(); //this stores all the placeHolders that need to be removed before a new word is generated
             foreach (Label label in Controls.OfType<Label>()) //This foreach loop identifies all labels that do not have empty tags and those whose tags are "placeHolder"
             {
                 if (label.Tag != null && label.Tag.ToString() == "placeHolder")
                 {
+                    
                     placeHoldersToChange.Add(label);
-
+                   
                 }
             }
 
             for (int i = 0; i < randomWord.Length; i++)
             {
-                if(randomWord[i] == Convert.ToChar(button.Text))
+               int correctletter = 0;
+                int correct = 0;
+
+                if (randomWord[i] == Convert.ToChar(button.Text.ToLower()))
                 {
+
                     placeHoldersToChange[i].Text = Convert.ToString(button.Text);
+
+                    if (placeHoldersToChange[i].Text == Convert.ToString(button.Text))
+                    {
+                       
+                        TxtDebug2.Text = Convert.ToString(correctletter);
+                    }
+
+
+
+                        if (placeHoldersToChange[i].Text != "--")
+                    {
+
+
+                        
+
+                       
+                    }
+
+                  
+                    TxtDebug.Text = Convert.ToString(correct);
 
                 }
             }
@@ -62,6 +91,7 @@ namespace HangThe______
             ReadTextFile(words);
             SelectRandomWord(words);
             GenerateLabelsForRandomWord();
+            
             TxtDebug.Text = randomWord;
            
             
@@ -94,6 +124,7 @@ namespace HangThe______
                     byte[] data = Convert.FromBase64String(line);//Convert encoded text into a byte
                     string decodedString = Encoding.UTF8.GetString(data);//Convert the byte into a usable string
                     words.Add(decodedString);
+                    
                  
                     
                 }
