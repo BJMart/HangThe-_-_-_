@@ -16,8 +16,8 @@ namespace HangThe______
     {
         const string path = "words.txt";
         string randomWord = "";
-       
-
+       int letters = 0;
+        int score = 0;
 
 
 
@@ -52,34 +52,30 @@ namespace HangThe______
 
             for (int i = 0; i < randomWord.Length; i++)
             {
-               int correctletter = 0;
-                int correct = 0;
+              
 
                 if (randomWord[i] == Convert.ToChar(button.Text.ToLower()))
                 {
 
                     placeHoldersToChange[i].Text = Convert.ToString(button.Text);
 
-                    if (placeHoldersToChange[i].Text == Convert.ToString(button.Text))
-                    {
-                       
-                        TxtDebug2.Text = Convert.ToString(correctletter);
-                    }
-
-
-
-                        if (placeHoldersToChange[i].Text != "--")
-                    {
-
-
-                        
-
-                       
-                    }
-
                   
-                    TxtDebug.Text = Convert.ToString(correct);
+                   if (randomWord[i] != (placeHoldersToChange[i]))
+                    {
+                        letters++;
+                    }
 
+                   
+
+    
+                    TxtDebug.Text = Convert.ToString(letters);
+                    if (letters == randomWord.Length)
+
+                    {
+
+                        TxtDebug2.Text = "yay";
+                        score ++;
+                    }
                 }
             }
         }
@@ -91,7 +87,7 @@ namespace HangThe______
             ReadTextFile(words);
             SelectRandomWord(words);
             GenerateLabelsForRandomWord();
-            
+            letters = 0;
             TxtDebug.Text = randomWord;
            
             
