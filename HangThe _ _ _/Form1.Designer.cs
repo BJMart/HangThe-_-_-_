@@ -32,7 +32,7 @@
             this.btnA = new System.Windows.Forms.Button();
             this.btnB = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
-            this.btnDE = new System.Windows.Forms.Button();
+            this.btnE = new System.Windows.Forms.Button();
             this.btnD = new System.Windows.Forms.Button();
             this.btnF = new System.Windows.Forms.Button();
             this.btnG = new System.Windows.Forms.Button();
@@ -59,6 +59,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TxtDebug = new System.Windows.Forms.TextBox();
             this.TxtDebug2 = new System.Windows.Forms.TextBox();
+            this.cbNewWord = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnA
@@ -91,15 +92,15 @@
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.NumberBTN);
             // 
-            // btnDE
+            // btnE
             // 
-            this.btnDE.Location = new System.Drawing.Point(74, 347);
-            this.btnDE.Name = "btnDE";
-            this.btnDE.Size = new System.Drawing.Size(25, 23);
-            this.btnDE.TabIndex = 0;
-            this.btnDE.Text = "E";
-            this.btnDE.UseVisualStyleBackColor = true;
-            this.btnDE.Click += new System.EventHandler(this.NumberBTN);
+            this.btnE.Location = new System.Drawing.Point(74, 347);
+            this.btnE.Name = "btnE";
+            this.btnE.Size = new System.Drawing.Size(25, 23);
+            this.btnE.TabIndex = 0;
+            this.btnE.Text = "E";
+            this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.NumberBTN);
             // 
             // btnD
             // 
@@ -338,7 +339,7 @@
             // 
             // TxtDebug
             // 
-            this.TxtDebug.Location = new System.Drawing.Point(136, 81);
+            this.TxtDebug.Location = new System.Drawing.Point(688, 12);
             this.TxtDebug.Name = "TxtDebug";
             this.TxtDebug.ReadOnly = true;
             this.TxtDebug.Size = new System.Drawing.Size(100, 20);
@@ -346,16 +347,28 @@
             // 
             // TxtDebug2
             // 
-            this.TxtDebug2.Location = new System.Drawing.Point(136, 107);
+            this.TxtDebug2.Location = new System.Drawing.Point(10, 12);
             this.TxtDebug2.Name = "TxtDebug2";
             this.TxtDebug2.Size = new System.Drawing.Size(100, 20);
             this.TxtDebug2.TabIndex = 3;
+            // 
+            // cbNewWord
+            // 
+            this.cbNewWord.AutoSize = true;
+            this.cbNewWord.Location = new System.Drawing.Point(430, 409);
+            this.cbNewWord.Name = "cbNewWord";
+            this.cbNewWord.Size = new System.Drawing.Size(96, 17);
+            this.cbNewWord.TabIndex = 4;
+            this.cbNewWord.Text = "AutoNewWord";
+            this.cbNewWord.UseVisualStyleBackColor = true;
+            this.cbNewWord.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbNewWord);
             this.Controls.Add(this.TxtDebug2);
             this.Controls.Add(this.TxtDebug);
             this.Controls.Add(this.btnGetNewWord);
@@ -368,7 +381,7 @@
             this.Controls.Add(this.btnH);
             this.Controls.Add(this.btnG);
             this.Controls.Add(this.btnF);
-            this.Controls.Add(this.btnDE);
+            this.Controls.Add(this.btnE);
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btnB);
             this.Controls.Add(this.btnZ);
@@ -398,7 +411,7 @@
         private System.Windows.Forms.Button btnA;
         private System.Windows.Forms.Button btnB;
         private System.Windows.Forms.Button btnC;
-        private System.Windows.Forms.Button btnDE;
+        private System.Windows.Forms.Button btnE;
         private System.Windows.Forms.Button btnD;
         private System.Windows.Forms.Button btnF;
         private System.Windows.Forms.Button btnG;
@@ -425,6 +438,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox TxtDebug;
         private System.Windows.Forms.TextBox TxtDebug2;
+        private System.Windows.Forms.CheckBox cbNewWord;
     }
 }
 
