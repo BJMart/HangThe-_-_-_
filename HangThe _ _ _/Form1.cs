@@ -18,7 +18,8 @@ namespace HangThe______
         string randomWord = "";
         int letters = 0;
         int score = 0;
-
+        int pass = 0;
+        int error = 0;
 
 
 
@@ -53,14 +54,14 @@ namespace HangThe______
 
             for (int i = 0; i < randomWord.Length; i++)
             {
-                
+
 
                 if (randomWord[i] == Convert.ToChar(button.Text.ToLower()))
                 {
-
+                    pass = 1;
                     placeHoldersToChange[i].Text = Convert.ToString(button.Text);
 
-                    
+
 
 
 
@@ -74,14 +75,14 @@ namespace HangThe______
                     }
 
 
-                   
-                    
+
+
                     if (letters == randomWord.Length)
 
                     {
                         score++;
                         TxtDebug2.Text = Convert.ToString(score);
-                        if (cbNewWord.Checked = true)
+                        if (cbNewWord.Checked == true)
                         {
                             GenerateNewWord();
                         }
@@ -89,14 +90,27 @@ namespace HangThe______
 
                 }
 
+               
+
             }
             
+            if (pass == 0 && error<= 7)
+            {
+                error++;
+
+            }
+            if(error == 7)
+            {
+                TxtDebug.Text = "fail";
+                error = 0;
+            }
+            pass = 0;
         }
 
         private void btnGetNewWord_Click(object sender, EventArgs e)
         {
             GenerateNewWord();
-
+            error = 0;
            
 
            
@@ -197,7 +211,7 @@ namespace HangThe______
             ReadTextFile(words);
             SelectRandomWord(words);
             GenerateLabelsForRandomWord();
-            TxtDebug.Text = randomWord;
+            
             letters = 0;
         }
 
