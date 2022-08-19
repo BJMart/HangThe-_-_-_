@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 
 
+
 namespace HangThe______
 {
     public partial class Form1 : System.Windows.Forms.Form
@@ -20,7 +21,8 @@ namespace HangThe______
         int score = 0;
         int pass = 0;
         int error = 0;
-
+       
+           
 
 
         public Form1()
@@ -28,12 +30,14 @@ namespace HangThe______
 
             InitializeComponent();
 
+            this.Height =720;
+            this.Width = 1280;
 
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
+       
+
+
         private void NumberBTN(object sender, EventArgs e)
         {
             Button button = sender as Button;
@@ -85,6 +89,7 @@ namespace HangThe______
                         if (cbNewWord.Checked == true)
                         {
                             GenerateNewWord();
+                            error = 0;
                         }
                     }
 
@@ -103,8 +108,11 @@ namespace HangThe______
             {
                 TxtDebug.Text = "fail";
                 error = 0;
+                DisableLetters();
             }
             pass = 0;
+
+          
         }
 
         private void btnGetNewWord_Click(object sender, EventArgs e)
@@ -243,6 +251,42 @@ namespace HangThe______
             btnX.Enabled = true;
             btnY.Enabled = true;
             btnZ.Enabled = true;
+        }
+        void DisableLetters()
+        {
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled = false;
+            btnD.Enabled = false;
+            btnE.Enabled = false;
+            btnF.Enabled = false;
+            btnG.Enabled = false;
+            btnH.Enabled = false;
+            btnI.Enabled = false;
+            btnJ.Enabled = false;
+            btnK.Enabled = false;
+            btnL.Enabled = false;
+            btnM.Enabled = false;
+            btnN.Enabled = false;
+            btnO.Enabled = false;
+            btnP.Enabled = false;
+            btnQ.Enabled = false;
+            btnR.Enabled = false;
+            btnS.Enabled = false;
+            btnT.Enabled = false;
+            btnU.Enabled = false;
+            btnV.Enabled = false;
+            btnW.Enabled = false;
+            btnX.Enabled = false;
+            btnY.Enabled = false;
+            btnZ.Enabled = false;
+        }
+        private void CheckKey(object sender, EventArgs e)
+        {
+
+            btnA.Enabled = false;
+
+
         }
     }
 }
