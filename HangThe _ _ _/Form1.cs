@@ -21,8 +21,8 @@ namespace HangThe______
         int score = 0;
         int pass = 0;
         int error = 0;
-       
-           
+        
+
 
 
         public Form1()
@@ -50,39 +50,21 @@ namespace HangThe______
             {
                 if (label.Tag != null && label.Tag.ToString() == "placeHolder")
                 {
-
                     placeHoldersToChange.Add(label);
-
                 }
             }
 
             for (int i = 0; i < randomWord.Length; i++)
             {
-
-
                 if (randomWord[i] == Convert.ToChar(button.Text.ToLower()))
                 {
                     pass = 1;
                     placeHoldersToChange[i].Text = Convert.ToString(button.Text);
-
-
-
-
-
                     if (placeHoldersToChange[i].Text != "--")
-                    {
-
+                    { 
                         letters++;
-
-
-
                     }
-
-
-
-
                     if (letters == randomWord.Length)
-
                     {
                         score++;
                         TxtDebug2.Text = Convert.ToString(score);
@@ -92,17 +74,18 @@ namespace HangThe______
                             error = 0;
                         }
                     }
-
                 }
-
-               
-
+            }
+            if (error>=0)
+            {
+                lblIncorrectText.Text = "Incorrect Letters";
             }
             
             if (pass == 0 && error<= 7)
             {
                 error++;
 
+                Lblincorrect.Text = Lblincorrect.Text + Convert.ToString(button.Text);
             }
             if(error == 7)
             {
@@ -111,14 +94,14 @@ namespace HangThe______
                 DisableLetters();
             }
             pass = 0;
-
-          
         }
 
         private void btnGetNewWord_Click(object sender, EventArgs e)
         {
             GenerateNewWord();
             error = 0;
+            Lblincorrect.Text ="";
+            lblIncorrectText.Text ="";
            
 
            
@@ -288,5 +271,7 @@ namespace HangThe______
 
 
         }
+
+       
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnA = new System.Windows.Forms.Button();
             this.btnB = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
@@ -60,6 +61,8 @@
             this.TxtDebug = new System.Windows.Forms.TextBox();
             this.TxtDebug2 = new System.Windows.Forms.TextBox();
             this.cbNewWord = new System.Windows.Forms.CheckBox();
+            this.Lblincorrect = new System.Windows.Forms.Label();
+            this.lblIncorrectText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnA
@@ -363,11 +366,29 @@
             this.cbNewWord.UseVisualStyleBackColor = true;
             this.cbNewWord.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // Lblincorrect
+            // 
+            this.Lblincorrect.AutoSize = true;
+            this.Lblincorrect.Location = new System.Drawing.Point(491, 275);
+            this.Lblincorrect.Name = "Lblincorrect";
+            this.Lblincorrect.Size = new System.Drawing.Size(0, 13);
+            this.Lblincorrect.TabIndex = 5;
+            // 
+            // lblIncorrectText
+            // 
+            this.lblIncorrectText.AutoSize = true;
+            this.lblIncorrectText.Location = new System.Drawing.Point(491, 262);
+            this.lblIncorrectText.Name = "lblIncorrectText";
+            this.lblIncorrectText.Size = new System.Drawing.Size(0, 13);
+            this.lblIncorrectText.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblIncorrectText);
+            this.Controls.Add(this.Lblincorrect);
             this.Controls.Add(this.cbNewWord);
             this.Controls.Add(this.TxtDebug2);
             this.Controls.Add(this.TxtDebug);
@@ -398,6 +419,7 @@
             this.Controls.Add(this.btnO);
             this.Controls.Add(this.btnN);
             this.Controls.Add(this.btnA);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "H_NGM_N";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -440,6 +462,8 @@
         private System.Windows.Forms.TextBox TxtDebug;
         private System.Windows.Forms.TextBox TxtDebug2;
         private System.Windows.Forms.CheckBox cbNewWord;
+        private System.Windows.Forms.Label Lblincorrect;
+        private System.Windows.Forms.Label lblIncorrectText;
     }
 }
 
