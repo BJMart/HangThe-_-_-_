@@ -63,6 +63,24 @@
             this.cbNewWord = new System.Windows.Forms.CheckBox();
             this.Lblincorrect = new System.Windows.Forms.Label();
             this.lblIncorrectText = new System.Windows.Forms.Label();
+            this.PicHang = new System.Windows.Forms.PictureBox();
+            this.picPole = new System.Windows.Forms.PictureBox();
+            this.PicBase = new System.Windows.Forms.PictureBox();
+            this.picHanger = new System.Windows.Forms.PictureBox();
+            this.picRope = new System.Windows.Forms.PictureBox();
+            this.picHead = new System.Windows.Forms.PictureBox();
+            this.PicArms = new System.Windows.Forms.PictureBox();
+            this.PicLegs = new System.Windows.Forms.PictureBox();
+            this.LblIncorrectLetters = new System.Windows.Forms.Label();
+            this.LblIncorrectChar = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.PicHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHanger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRope)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicArms)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLegs)).BeginInit();
             this.SuspendLayout();
             // 
             // btnA
@@ -342,11 +360,13 @@
             // 
             // TxtDebug
             // 
+            this.TxtDebug.Enabled = false;
             this.TxtDebug.Location = new System.Drawing.Point(688, 12);
             this.TxtDebug.Name = "TxtDebug";
             this.TxtDebug.ReadOnly = true;
             this.TxtDebug.Size = new System.Drawing.Size(100, 20);
             this.TxtDebug.TabIndex = 2;
+            this.TxtDebug.Visible = false;
             // 
             // TxtDebug2
             // 
@@ -369,7 +389,7 @@
             // Lblincorrect
             // 
             this.Lblincorrect.AutoSize = true;
-            this.Lblincorrect.Location = new System.Drawing.Point(491, 275);
+            this.Lblincorrect.Location = new System.Drawing.Point(186, 275);
             this.Lblincorrect.Name = "Lblincorrect";
             this.Lblincorrect.Size = new System.Drawing.Size(0, 13);
             this.Lblincorrect.TabIndex = 5;
@@ -377,16 +397,111 @@
             // lblIncorrectText
             // 
             this.lblIncorrectText.AutoSize = true;
-            this.lblIncorrectText.Location = new System.Drawing.Point(491, 262);
+            this.lblIncorrectText.Location = new System.Drawing.Point(186, 262);
             this.lblIncorrectText.Name = "lblIncorrectText";
             this.lblIncorrectText.Size = new System.Drawing.Size(0, 13);
             this.lblIncorrectText.TabIndex = 6;
+            // 
+            // PicHang
+            // 
+            this.PicHang.Image = global::HangThe______.Properties.Resources.hang;
+            this.PicHang.Location = new System.Drawing.Point(10, 36);
+            this.PicHang.Name = "PicHang";
+            this.PicHang.Size = new System.Drawing.Size(367, 305);
+            this.PicHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicHang.TabIndex = 7;
+            this.PicHang.TabStop = false;
+            this.PicHang.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // picPole
+            // 
+            this.picPole.Location = new System.Drawing.Point(71, 50);
+            this.picPole.Name = "picPole";
+            this.picPole.Size = new System.Drawing.Size(26, 277);
+            this.picPole.TabIndex = 8;
+            this.picPole.TabStop = false;
+            // 
+            // PicBase
+            // 
+            this.PicBase.Location = new System.Drawing.Point(56, 323);
+            this.PicBase.Name = "PicBase";
+            this.PicBase.Size = new System.Drawing.Size(268, 18);
+            this.PicBase.TabIndex = 9;
+            this.PicBase.TabStop = false;
+            // 
+            // picHanger
+            // 
+            this.picHanger.Location = new System.Drawing.Point(71, 36);
+            this.picHanger.Name = "picHanger";
+            this.picHanger.Size = new System.Drawing.Size(237, 18);
+            this.picHanger.TabIndex = 10;
+            this.picHanger.TabStop = false;
+            // 
+            // picRope
+            // 
+            this.picRope.Location = new System.Drawing.Point(242, 50);
+            this.picRope.Name = "picRope";
+            this.picRope.Size = new System.Drawing.Size(16, 36);
+            this.picRope.TabIndex = 11;
+            this.picRope.TabStop = false;
+            // 
+            // picHead
+            // 
+            this.picHead.Location = new System.Drawing.Point(218, 83);
+            this.picHead.Name = "picHead";
+            this.picHead.Size = new System.Drawing.Size(64, 63);
+            this.picHead.TabIndex = 12;
+            this.picHead.TabStop = false;
+            // 
+            // PicArms
+            // 
+            this.PicArms.Location = new System.Drawing.Point(199, 143);
+            this.PicArms.Name = "PicArms";
+            this.PicArms.Size = new System.Drawing.Size(100, 59);
+            this.PicArms.TabIndex = 13;
+            this.PicArms.TabStop = false;
+            // 
+            // PicLegs
+            // 
+            this.PicLegs.Location = new System.Drawing.Point(199, 195);
+            this.PicLegs.Name = "PicLegs";
+            this.PicLegs.Size = new System.Drawing.Size(100, 50);
+            this.PicLegs.TabIndex = 14;
+            this.PicLegs.TabStop = false;
+            // 
+            // LblIncorrectLetters
+            // 
+            this.LblIncorrectLetters.AutoSize = true;
+            this.LblIncorrectLetters.Location = new System.Drawing.Point(472, 231);
+            this.LblIncorrectLetters.Name = "LblIncorrectLetters";
+            this.LblIncorrectLetters.Size = new System.Drawing.Size(81, 13);
+            this.LblIncorrectLetters.TabIndex = 15;
+            this.LblIncorrectLetters.Text = "IncorrectLetters";
+            // 
+            // LblIncorrectChar
+            // 
+            this.LblIncorrectChar.AutoSize = true;
+            this.LblIncorrectChar.Location = new System.Drawing.Point(475, 274);
+            this.LblIncorrectChar.Name = "LblIncorrectChar";
+            this.LblIncorrectChar.Size = new System.Drawing.Size(13, 13);
+            this.LblIncorrectChar.TabIndex = 16;
+            this.LblIncorrectChar.Text = "1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LblIncorrectChar);
+            this.Controls.Add(this.LblIncorrectLetters);
+            this.Controls.Add(this.PicLegs);
+            this.Controls.Add(this.PicArms);
+            this.Controls.Add(this.picHead);
+            this.Controls.Add(this.picRope);
+            this.Controls.Add(this.picHanger);
+            this.Controls.Add(this.PicBase);
+            this.Controls.Add(this.picPole);
+            this.Controls.Add(this.PicHang);
             this.Controls.Add(this.lblIncorrectText);
             this.Controls.Add(this.Lblincorrect);
             this.Controls.Add(this.cbNewWord);
@@ -424,6 +539,14 @@
             this.Text = "H_NGM_N";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckKey);
+            ((System.ComponentModel.ISupportInitialize)(this.PicHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHanger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRope)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicArms)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLegs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,6 +587,16 @@
         private System.Windows.Forms.CheckBox cbNewWord;
         private System.Windows.Forms.Label Lblincorrect;
         private System.Windows.Forms.Label lblIncorrectText;
+        private System.Windows.Forms.PictureBox PicHang;
+        private System.Windows.Forms.PictureBox picPole;
+        private System.Windows.Forms.PictureBox PicBase;
+        private System.Windows.Forms.PictureBox picHanger;
+        private System.Windows.Forms.PictureBox picRope;
+        private System.Windows.Forms.PictureBox picHead;
+        private System.Windows.Forms.PictureBox PicArms;
+        private System.Windows.Forms.PictureBox PicLegs;
+        private System.Windows.Forms.Label LblIncorrectLetters;
+        private System.Windows.Forms.Label LblIncorrectChar;
     }
 }
 

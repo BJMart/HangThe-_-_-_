@@ -32,6 +32,10 @@ namespace HangThe______
 
             this.Height =720;
             this.Width = 1280;
+            LblIncorrectChar.Text ="";
+            LblIncorrectLetters.Text ="";
+            GenerateNewWord();
+            error = 0;
 
         }
 
@@ -72,20 +76,52 @@ namespace HangThe______
                         {
                             GenerateNewWord();
                             error = 0;
+                            LblIncorrectChar.Text ="";
+                            LblIncorrectLetters.Text ="";
+                           
                         }
                     }
                 }
             }
             if (error>=0)
             {
-                lblIncorrectText.Text = "Incorrect Letters";
+                LblIncorrectLetters.Text = "Incorrect Letters";
+              
             }
             
             if (pass == 0 && error<= 7)
             {
                 error++;
 
-                Lblincorrect.Text = Lblincorrect.Text + Convert.ToString(button.Text);
+                LblIncorrectChar.Text = LblIncorrectChar.Text + Convert.ToString(button.Text);
+                if (error ==1)
+                {
+                    PicBase.Visible = false;
+                }
+                if (error ==2)
+                {
+                    picPole.Visible = false;
+                }
+                if (error==3)
+                {
+                    picHanger.Visible = false;
+                }
+                if (error==4)
+                {
+                    picRope.Visible = false;
+                }
+                if (error==5)
+                {
+                    picHead.Visible = false;
+                }
+                if (error==6)
+                {
+                    PicArms.Visible = false;
+                }
+                if (error==7)
+                {
+                    PicLegs.Visible = false;
+                }
             }
             if(error == 7)
             {
@@ -99,9 +135,10 @@ namespace HangThe______
         private void btnGetNewWord_Click(object sender, EventArgs e)
         {
             GenerateNewWord();
+            LblIncorrectChar.Text ="";
+            LblIncorrectLetters.Text ="";
             error = 0;
-            Lblincorrect.Text ="";
-            lblIncorrectText.Text ="";
+          
            
 
            
@@ -154,7 +191,7 @@ namespace HangThe______
         private void GenerateLabelsForRandomWord()
         {
             Label[] labels = new Label[randomWord.Length]; // Array of Labels of length of random word is declared.
-            int xPos = 360; //This is the initial x position of the first placeholder on the form
+            int xPos = 420; //This is the initial x position of the first placeholder on the form
             for (int i = 0; i < randomWord.Length; i++) //this for loop runs for the number of characters in the random word and creates a new label
             { //setting a bunch of properties including the important tag used to delete them when a new
                 labels[i] = new Label(); //word is generated. each label represents a character in the randomword and is initially displayed
@@ -202,8 +239,10 @@ namespace HangThe______
             ReadTextFile(words);
             SelectRandomWord(words);
             GenerateLabelsForRandomWord();
-            
+            HideHangman();
+           
             letters = 0;
+
         }
 
         void EnableAllLetters()
@@ -272,6 +311,20 @@ namespace HangThe______
 
         }
 
-       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        void HideHangman()
+        {
+            PicBase.Visible = true;
+            picPole.Visible = true;
+            picHanger.Visible = true;
+            picRope.Visible = true;
+            picHead.Visible = true;
+            PicArms.Visible = true;
+            PicLegs.Visible = true;
+        }
     }
 }
